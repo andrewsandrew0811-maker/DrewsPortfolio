@@ -110,9 +110,9 @@ export default function About() {
         {/* Left: two overlapping photos */}
         <div className="relative mx-auto flex items-center justify-center order-1" {...reveal(0)}>
           {/* Wide ambient glow blob, dark mode only */}
-          <div className="glow-blob hidden dark:block h-80 w-80 -translate-y-4" />
+          <div className="glow-blob hidden dark:block h-56 w-56 -translate-y-4 sm:h-80 sm:w-80" />
 
-          <div className="relative mx-auto flex w-fit items-center justify-center -space-x-8 sm:-space-x-14 lg:-space-x-16">
+          <div className="relative mx-auto flex w-fit items-center justify-center -space-x-6 sm:-space-x-10 lg:-space-x-16">
             {PHOTOS.map((photo, i) => {
               const isActive = active === i;
               const isOther = active === (i === 0 ? 1 : 0);
@@ -122,7 +122,7 @@ export default function About() {
                   onMouseEnter={() => setActive(i)}
                   onMouseLeave={() => setActive(null)}
                   onClick={() => handleTap(i)}
-                  className={`group relative h-56 w-56 cursor-pointer transition-all duration-500 ease-out sm:h-64 sm:w-64 lg:h-72 lg:w-72 ${
+                  className={`group relative h-32 w-32 cursor-pointer transition-all duration-500 ease-out sm:h-56 sm:w-56 lg:h-72 lg:w-72 ${
                     isActive
                       ? "z-30 -translate-y-5 scale-105"
                       : isOther
