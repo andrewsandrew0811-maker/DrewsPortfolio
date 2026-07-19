@@ -48,7 +48,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
       {/* Logo + name */}
       <a href="#home" className="flex shrink-0 items-center gap-1.5 select-none sm:gap-2">
         <img src="/logo.png" alt="Drewss logo" className="h-6 w-6 object-contain sm:h-7 sm:w-7 md:h-8 md:w-8" />
-        <span className="text-base font-bold tracking-wider text-slate-900 dark:text-blue-200 sm:text-lg md:text-xl">
+        <span className="text-base font-bold tracking-wider text-slate-900 dark:text-blue-600 sm:text-lg md:text-xl">
           Drewss
         </span>
       </a>
