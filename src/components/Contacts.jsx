@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Send } from "lucide-react";
 import emailjs from "@emailjs/browser";
+import { useRateLimit } from "../hooks/useRateLimit";
 
 // Reveals once when the section scrolls into view
 function useInView(options = { threshold: 0.2 }) {
@@ -50,6 +51,7 @@ export default function Contacts() {
     message: "",
   });
   const [status, setStatus] = useState("idle"); // idle | sending | sent | error
+  const { canSubmit, recordSubmit, remainingCooldown } = useRateLimit();
 
   const reveal = (delayMs = 0) => ({
     className: `transition-all duration-700 ease-out ${
