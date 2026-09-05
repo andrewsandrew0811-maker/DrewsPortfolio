@@ -61,7 +61,7 @@ function ProjectImage({ src, alt, className, fallbackLabel = "Project Image" }) 
       <img
         src={src}
         alt={alt}
-        className="h-full w-full object-cover"
+        className="h-full w-full object-contain"
         onError={(e) => {
           e.currentTarget.style.display = "none";
           e.currentTarget.nextSibling.style.display = "flex";
