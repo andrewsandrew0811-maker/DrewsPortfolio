@@ -36,8 +36,8 @@ const PROJECTS = [
     id: "waste",
     title: "Smart Waste Segregation System",
     course: "CpE 414 – Embedded Systems & CpE 113 – Microelectronics 3",
-    image: "/projects/waste-segregation.png",
-    image2: "/projects/waste-segregation-2.png",
+    image: "/projects/waste-segregation.jpg",
+    image2: "/projects/waste-segregation-2.jpg",
     description:
       "An automated waste segregation system using an Arduino Uno with ultrasonic, capacitive, and inductive sensors to detect and sort waste by material type, driven by a DC motor mechanism for physical sorting.",
     tags: ["Arduino Uno", "Sensors", "Embedded Systems"],
