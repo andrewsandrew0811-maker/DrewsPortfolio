@@ -55,13 +55,13 @@ const PROJECTS = [
 ];
 
 // A single image with a graceful text fallback if the file doesn't exist yet
-function ProjectImage({ src, alt, className, fallbackLabel = "Project Image" }) {
+function ProjectImage({ src, alt, className, fit = "object-cover", fallbackLabel = "Project Image" }) {
   return (
     <div className={`relative flex items-center justify-center overflow-hidden bg-slate-200/50 dark:bg-slate-900/60 ${className}`}>
       <img
         src={src}
         alt={alt}
-        className="h-full w-full object-contain"
+        className={`h-full w-full ${fit}`}
         onError={(e) => {
           e.currentTarget.style.display = "none";
           e.currentTarget.nextSibling.style.display = "flex";
@@ -283,7 +283,7 @@ export default function Project() {
             >
               ✕
             </button>
-            <ProjectImage src={lightbox.src} alt={lightbox.alt} className="h-72 w-full sm:h-96" />
+            <ProjectImage src={lightbox.src} alt={lightbox.alt} className="h-72 w-full sm:h-96" fit="object-contain" />
           </div>
         </div>
       )}
