@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="border-t border-slate-200 bg-slate-50 px-6 py-8 dark:border-slate-800 dark:bg-slate-950 md:px-10 lg:px-12">
       <div className="mx-auto flex w-full max-w-7xl flex-col items-center gap-4 text-center sm:flex-row sm:justify-between sm:text-left">
         <div>
-          <p className="text-sm font-bold tracking-wider text-slate-900 dark:text-(--color-accent)">
+          <p className="text-sm font-bold tracking-wider text-slate-400 dark:text-(--color-accent)">
             Drewss
           </p>
           <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">
